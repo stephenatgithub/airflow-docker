@@ -29,6 +29,20 @@ A DAG (Directed Acyclic Graph) is the core concept of Airflow, collecting Tasks 
 
 `docker compose up`
 
+- Disable auto start container
+
+`docker update --restart=no [container id]`
+
+
+# docker-compose.yaml
+
+- services
+`restart: always`
+
+- volumes
+`- ${AIRFLOW_PROJ_DIR:-.}/config/airflow.cfg:/opt/airflow/config/airflow.cfg`
+
+
 
 # Scheduler
 
@@ -50,7 +64,7 @@ The scheduler runs your job one schedule AFTER the start date, at the END of the
 
 # Use Case
 
-1. event drive by new file (trade feed/ price feed)
+1. event driven by new file (trade feed/ price feed)
 
 2. generate reports and send emails
 
@@ -58,6 +72,10 @@ The scheduler runs your job one schedule AFTER the start date, at the END of the
 
 
 
+# Enable OpenSSH Server in Win11 for SSHOperator
 
-
+1. Settings, App, Optional features, New features, Install OpenSSH server
+2. Services, OpenSSH server, Automatic Startup
+3. Settings, Privacy and security, Windows Security, Firewall, Advance Settings
+4. Inbound Rules, New rules, Port, TCP, port = 22
 
