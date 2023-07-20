@@ -36,7 +36,7 @@ with DAG(
   	# DAG 的描述，可以在 UI 看到
     description='A DAG for demonstration',
   	# DAG 的執行間隔
-  	schedule_interval="0,30 * * * *",
+  	schedule_interval="@once",
   	# DAG 的開始時間，第一次執行會是 start_date + schedule_interval
   	start_date=datetime(2021, 7, 1, 0, 0, 0, 0),
     catchup=False,

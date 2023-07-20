@@ -4,3 +4,4 @@ logs
 plugins
 .env
 __pycache__
+connections.txt

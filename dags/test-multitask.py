@@ -16,6 +16,6 @@ def get_file_names() -> List[str]:
 def process_file_name(file_name: str) -> str:
     return file_name.replace('.txt', '.json')
 
-with DAG(dag_id="test-multitask", start_date=datetime(2022, 9, 14),catchup=False) as dag:
+with DAG(dag_id="test-multitask", start_date=datetime(2022, 9, 14),schedule_interval="@once",catchup=False) as dag:
     file_names = get_file_names()
     processed_file_names = process_file_name.expand(file_name=file_names)    
