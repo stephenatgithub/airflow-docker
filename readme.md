@@ -42,7 +42,7 @@ A DAG (Directed Acyclic Graph) is the core concept of Airflow, collecting Tasks 
 `whoami`
 
 
-- Additional Dependencies 
+# Additional Dependencies 
 
 [Using custom images](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html#using-custom-images)
 
