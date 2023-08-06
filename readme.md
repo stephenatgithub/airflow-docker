@@ -16,7 +16,7 @@ A DAG (Directed Acyclic Graph) is the core concept of Airflow, collecting Tasks 
 `mkdir -p ./dags ./logs ./plugins ./config`
 
 
-- Create environment variables
+- Create environment variables file .env
 
 `AIRFLOW_UID=50000`
 
@@ -83,7 +83,7 @@ build: .
 
 # docker-compose.yaml
 
-- services
+- under services, auto start container when docker starts
 `restart: always`
 
 - Disable auto start container

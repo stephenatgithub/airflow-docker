@@ -17,4 +17,5 @@
 # [START Dockerfile]
 FROM apache/airflow:latest-python3.9
 RUN pip install --no-cache-dir "apache-airflow==${AIRFLOW_VERSION}" apache-airflow-providers-smtp==1.2.0
+RUN pip install --no-cache-dir "apache-airflow==${AIRFLOW_VERSION}" apache-airflow-providers-http==4.5.0
 # [END Dockerfile]
